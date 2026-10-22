@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="穿越两千年：张骞带你重走丝绸之路——数字人智慧历史微课">
+<title>穿越两千年｜张骞与丝绸之路</title>
+<style>
+:root{--ink:#252c2a;--muted:#68716b;--paper:#f7f4ec;--paper2:#fffdf8;--red:#9b3d2f;--gold:#c59a53;--green:#526d5a;--line:#e4ded1;--shadow:0 16px 42px rgba(44,39,29,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.75}a{color:inherit}button{font:inherit;cursor:pointer}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+.topbar{height:62px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(87,78,59,.13);background:rgba(247,244,236,.88);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}.brand{font-weight:800;letter-spacing:.08em}.brand span{color:var(--red)}nav{display:flex;gap:25px;font-size:14px;color:var(--muted)}nav a{text-decoration:none}nav a:hover{color:var(--red)}.menu{display:none;border:1px solid var(--line);background:transparent;border-radius:8px;padding:5px 10px}
+.hero{position:relative;overflow:hidden;padding:76px 0 72px;background:linear-gradient(110deg,rgba(247,244,236,.98) 0%,rgba(247,244,236,.94) 48%,rgba(247,244,236,.42) 100%),radial-gradient(ellipse at 85% 30%,#d6c4a0 0%,#e9e0ce 28%,transparent 58%)}.hero:after{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(155,61,47,.22);border-radius:50%;right:-80px;top:-90px;box-shadow:0 0 0 28px rgba(155,61,47,.035),0 0 0 65px rgba(155,61,47,.025)}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center;position:relative;z-index:1}.eyebrow{color:var(--red);font-size:13px;font-weight:800;letter-spacing:.2em}.hero h1{font-family:"STSong","Songti SC",serif;font-size:clamp(38px,5.4vw,68px);line-height:1.17;letter-spacing:.04em;margin:18px 0}.hero h1 em{font-style:normal;color:var(--red)}.hero p{color:#5e655f;max-width:570px;margin:0 0 26px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:1px solid var(--red);border-radius:4px;padding:11px 19px;background:var(--red);color:white;text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:14px}.btn.secondary{background:transparent;color:var(--red);border-color:#c9b9a8}.hero-art{min-height:310px;display:grid;place-items:center;position:relative}.sun{width:230px;height:230px;border-radius:50%;background:linear-gradient(145deg,#d8bc83,#b47e55);opacity:.75;position:absolute;right:15%;top:12%}.mountain{position:absolute;bottom:18px;width:100%;height:170px;background:#a6a58a;clip-path:polygon(0 85%,20% 30%,35% 65%,55% 10%,77% 70%,100% 25%,100% 100%,0 100%);opacity:.75}.mountain.back{height:135px;background:#c3b89c;bottom:8px;transform:translateX(-20px);opacity:.7}.traveler{position:relative;z-index:2;font-size:90px;filter:drop-shadow(0 8px 8px rgba(0,0,0,.15));margin-top:25px}.seal{position:absolute;right:4%;bottom:6px;border:2px solid var(--red);color:var(--red);padding:7px 10px;font-family:serif;writing-mode:vertical-rl;letter-spacing:.15em;font-weight:700;transform:rotate(7deg)}
+.section{padding:76px 0}.section.alt{background:var(--paper2)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.section-head h2{font-family:"STSong","Songti SC",serif;font-size:clamp(27px,3vw,38px);margin:7px 0 0}.section-head p{margin:0;color:var(--muted);font-size:14px;max-width:440px}.kicker{font-size:12px;letter-spacing:.18em;color:var(--red);font-weight:800}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid var(--line);border-radius:8px;padding:23px;box-shadow:0 7px 22px rgba(50,45,35,.03)}.card .num{font-family:Georgia,serif;color:var(--gold);font-size:31px}.card h3{margin:8px 0;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}.tag{display:inline-block;color:var(--green);background:#edf1e9;border-radius:99px;padding:3px 10px;font-size:12px;margin-bottom:8px}
+.timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.timeline:before{content:"";position:absolute;left:6%;right:6%;top:17px;height:1px;background:#d6c5a8}.event{position:relative;padding-top:43px}.event:before{content:"";position:absolute;top:10px;left:0;width:14px;height:14px;border-radius:50%;background:var(--red);border:4px solid var(--paper2);box-shadow:0 0 0 1px #c9b99f}.event strong{display:block;color:var(--red);font-size:14px}.event h3{font-size:17px;margin:7px 0}.event p{font-size:13px;color:var(--muted);margin:0}
+.route{display:grid;grid-template-columns:.85fr 1.15fr;gap:25px;align-items:stretch}.route-copy{padding:28px;background:#ede6d8;border-radius:8px}.route-copy h3{font-family:"STSong","Songti SC",serif;font-size:27px;margin:0 0 10px}.route-copy p{color:#5d635d;font-size:14px}.route-list{padding:0;list-style:none;margin:20px 0 0}.route-list li{display:flex;gap:12px;margin:12px 0;font-size:14px}.route-list b{color:var(--red);min-width:78px}.mapbox{border:1px solid var(--line);background:#f1eadb;border-radius:8px;min-height:320px;overflow:hidden;position:relative;display:grid;place-items:center}.mapbox svg{width:100%;height:100%;min-height:320px}.map-note{position:absolute;bottom:13px;left:15px;font-size:11px;color:#6e6b5c;background:rgba(255,253,248,.8);padding:4px 8px;border-radius:4px}
+.agent-section{background:#28362f;color:#f8f2e6}.agent-section .section-head p{color:#c1c9c1}.agent-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:stretch}.agent-copy{padding:25px 0}.agent-copy h2{font-family:"STSong","Songti SC",serif;font-size:35px;line-height:1.3;margin:12px 0}.agent-copy p{color:#c6cec7}.agent-points{display:grid;gap:10px;margin-top:22px}.agent-points div{border-left:2px solid var(--gold);padding:4px 0 4px 13px;color:#e4e6df;font-size:14px}.agent-panel{background:#f9f5eb;color:var(--ink);border-radius:10px;padding:20px;min-height:360px;box-shadow:var(--shadow)}.agent-panel h3{margin:0 0 6px}.agent-panel p{font-size:13px;color:var(--muted);margin:0 0 14px}.agent-placeholder{min-height:230px;border:1px dashed #c8bba4;border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;background:linear-gradient(135deg,#f1eadb,#fbf8f0)}.avatar-icon{font-size:48px;display:block}.agent-placeholder strong{display:block;margin:8px 0}.agent-placeholder small{display:block;color:var(--muted);max-width:330px}.embed-instructions{margin-top:14px;background:#fff;border-radius:7px;padding:12px;font-size:12px;color:#68716b}.embed-instructions code{white-space:normal;overflow-wrap:anywhere;color:var(--red)}#did-agent-container{width:100%;min-height:280px}
+.quiz{display:grid;grid-template-columns:1fr .85fr;gap:25px}.quiz-card{border:1px solid var(--line);background:white;border-radius:8px;padding:25px}.quiz-card h3{margin-top:0}.option{display:block;width:100%;text-align:left;padding:12px 14px;border:1px solid var(--line);background:#fffdf8;border-radius:6px;margin:9px 0;color:var(--ink)}.option:hover{border-color:var(--gold)}.option.correct{background:#edf3e9;border-color:#7a9a77}.option.wrong{background:#f8e9e4;border-color:#bd7666}.feedback{font-size:14px;margin-top:12px;color:var(--green);min-height:24px}.reflection{background:#ede6d8;padding:25px;border-radius:8px}.reflection h3{margin-top:0}.reflection p{font-size:14px;color:#5d635d}.reflection .prompt{font-family:"STSong","Songti SC",serif;font-size:23px;line-height:1.5;color:var(--ink)}
+.quiz-topline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.quiz-counter{font-size:13px;color:var(--muted);font-weight:700}.progress-track{height:5px;background:#eee8dc;border-radius:99px;overflow:hidden;margin:12px 0 22px}.progress-fill{height:100%;width:10%;background:var(--red);transition:width .25s ease}.quiz-card #questionTitle{font-size:20px;line-height:1.55;margin:0 0 18px}.quiz-controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.quiz-nav{border:1px solid var(--red);background:var(--red);color:white;border-radius:5px;padding:9px 15px;font-size:13px}.quiz-nav.secondary-nav{background:transparent;color:var(--red);border-color:#c9b9a8}.quiz-nav:disabled{opacity:.4;cursor:not-allowed}.quiz-result{margin-top:20px;padding:18px;background:#f4efe4;border-radius:7px}.quiz-result strong{color:var(--red)}.review-item{padding:13px 0;border-bottom:1px solid #e4ded1;font-size:13px}.review-item:last-child{border-bottom:0}.review-item b{display:block;margin-bottom:4px}.review-correct{color:#526d5a}.review-wrong{color:#9b3d2f}.option:disabled{cursor:default}.option:focus-visible,.quiz-nav:focus-visible{outline:3px solid #c59a53;outline-offset:2px}
+
+footer{padding:27px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.smallcaps{letter-spacing:.12em}
+@media(max-width:760px){nav{display:none;position:absolute;top:61px;left:0;right:0;padding:15px 22px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:12px}.menu{display:block}.hero{padding:50px 0}.hero-grid,.route,.agent-grid,.quiz{grid-template-columns:1fr}.hero-art{min-height:230px;order:-1}.sun{width:170px;height:170px;right:25%}.traveler{font-size:70px}.cards{grid-template-columns:1fr}.timeline{grid-template-columns:1fr 1fr;row-gap:25px}.timeline:before{display:none}.section{padding:52px 0}.section-head{align-items:start;flex-direction:column}.agent-panel{min-height:300px}.route-copy{padding:22px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+    <a class="brand" href="#home" style="text-decoration:none">丝路<span>·</span>寻踪</a>
+    <nav id="nav"><a href="#story">人物与使命</a><a href="#timeline">历史时间轴</a><a href="#route">西行路线</a><a href="#digital">数字人课堂</a><a href="#quiz">课堂挑战</a></nav>
+    <button class="menu" id="menuBtn" aria-label="打开导航">☰</button>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">INTERACTIVE HISTORY LESSON · 汉代中外交流</div>
+      <h1>穿越两千年<br><em>张骞与丝绸之路</em></h1>
+      <p>跟随西汉使者张骞的脚步，从长安出发，穿越河西走廊，认识一段关于远行、探索与交流的历史。</p>
+      <div class="actions"><a class="btn" href="#digital">进入数字人课堂 <span>↗</span></a><a class="btn secondary" href="#timeline">开始历史探索</a></div>
+    </div>
+    <div class="hero-art" aria-label="沙漠与远行者的装饰插画">
+      <div class="sun"></div><div class="mountain back"></div><div class="mountain"></div><div class="traveler">🐫</div><div class="seal">西行求索</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="story">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker">01 / THE ENVOY</div><h2>一位使者，一段远行</h2></div><p>历史不是孤立的年份。理解人物的使命与选择，才能看见事件背后的时代联系。</p></div>
+    <div class="cards">
+      <article class="card"><div class="num">01</div><span class="tag">使命</span><h3>奉命出使</h3><p>汉武帝时期，汉朝希望联合大月氏共同应对匈奴，张骞受命出使西域。</p></article>
+      <article class="card"><div class="num">02</div><span class="tag">考验</span><h3>历经艰险</h3><p>途中被匈奴拘留多年。脱身后仍继续西行，了解沿途地区与更广阔的西域世界。</p></article>
+      <article class="card"><div class="num">03</div><span class="tag">影响</span><h3>增进了解</h3><p>出使带回有关西域的重要信息，为汉朝进一步发展与西域的联系创造了条件。</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="timeline">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker">02 / TIMELINE</div><h2>沿着时间，读懂历史</h2></div><p>点击时间节点可以查看学习提示。年份采用常见教材叙述，具体表述请以课程教材为准。</p></div>
+    <div class="timeline">
+      <article class="event"><strong>公元前138年左右</strong><h3>第一次出使</h3><p>张骞奉命前往西域，途中遭遇阻碍。</p></article>
+      <article class="event"><strong>公元前126年左右</strong><h3>返回汉朝</h3><p>张骞回到汉朝，带回西域各地的见闻与信息。</p></article>
+      <article class="event"><strong>公元前119年前后</strong><h3>再次出使</h3><p>张骞再次奉命出使，推动汉朝与西域的交往。</p></article>
+      <article class="event"><strong>此后持续发展</strong><h3>交流日益展开</h3><p>汉朝与西域的联系不断发展，人员、物产与文化交流逐步增多。</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="route">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker">03 / THE ROUTE</div><h2>从长安，向西而行</h2></div><p>用空间线索辅助理解历史。下方为教学示意，不代表唯一、精确的历史行进路线。</p></div>
+    <div class="route">
+      <div class="route-copy"><h3>地图上的历史线索</h3><p>张骞的出使让汉朝对西域的地理、社会与物产有了更深入的认识。路线不仅连接地点，也连接了不同地区的人群与信息。</p><ul class="route-list"><li><b>出发地</b><span>长安（今西安一带）</span></li><li><b>西行通道</b><span>河西走廊</span></li><li><b>西域地区</b><span>大宛、康居、大夏等地</span></li><li><b>历史作用</b><span>促进了解，为后续交流创造条件</span></li></ul></div>
+      <div class="mapbox">
+        <svg viewBox="0 0 600 390" role="img" aria-label="长安到西域的教学路线示意图">
+          <defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#c8bda5" opacity=".45"/></pattern></defs>
+          <rect width="600" height="390" fill="url(#dots)"/>
+          <path d="M35 295 Q95 240 145 275 T260 228 T370 250 T500 165 T590 150" fill="none" stroke="#d7c9ac" stroke-width="32" stroke-linecap="round" opacity=".45"/>
+          <path d="M70 300 C145 270 180 260 240 230 S350 205 395 170 S480 135 530 90" fill="none" stroke="#9b3d2f" stroke-width="3.5" stroke-dasharray="7 7"/>
+          <g fill="#9b3d2f"><circle cx="70" cy="300" r="7"/><circle cx="240" cy="230" r="7"/><circle cx="395" cy="170" r="7"/><circle cx="530" cy="90" r="7"/></g>
+          <g font-family="Microsoft YaHei,sans-serif" fill="#4c5149" font-size="15" font-weight="600"><text x="40" y="330">长安</text><text x="183" y="215">河西走廊</text><text x="355" y="153">西域</text><text x="485" y="70">大夏一带</text></g>
+          <g fill="#8a806d" font-size="11"><text x="65" y="55">西行方向</text><text x="65" y="72">←</text><text x="320" y="345">古代地理与路线教学示意</text></g>
+          <path d="M74 85 C125 100 150 110 180 140" stroke="#b9a785" stroke-width="1.5" fill="none"/>
+          <path d="M180 140 l-10 -3 l5 9" stroke="#b9a785" stroke-width="1.5" fill="none"/>
+        </svg>
+        <div class="map-note">路线为概念示意图，非精确比例地图</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section agent-section" id="digital">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker" style="color:#d9b778">04 / DIGITAL HUMAN</div><h2>与数字人张骞一起学习</h2></div><p>让历史人物成为学习引导者，再用地图、时间轴和史实完成理解。</p></div>
+    <div class="agent-grid">
+      <div class="agent-copy">
+        <div class="kicker" style="color:#d9b778">YOUR VIRTUAL HISTORY GUIDE</div>
+        <h2>“同学们，<br>让我带你重走这段旅程。”</h2>
+        <p>你可以在这里观看数字人讲解，或与已配置为可交互对话的 D-ID Agent 交流。请注意：静态口播视频与实时交互 Agent 是两种不同的嵌入方式。</p>
+        <div class="agent-points"><div>人物叙事：了解张骞出使的背景与经历</div><div>地图辅助：把时间线与空间路线联系起来</div><div>问题引导：尝试解释事件的直接成果与长远影响</div></div>
+      </div>
+      <div class="agent-panel">
+        <h3>数字人课堂 · 张骞</h3>
+        <p>将下方占位区域替换为你自己的 D-ID 嵌入代码或视频文件。</p>
+        <!-- OPTION A: D-ID interactive Agent embed.
+             In D-ID Studio > Agents > your agent > ⋯ > Embed:
+             allow your published website domain, then copy the complete script snippet.
+             For inline display, use data-mode="full" and data-target-id="did-agent-container".
+             Paste the D-ID-provided script immediately before </body> or here, replacing this comment. -->
+        <div id="did-agent-container">
+          <div class="agent-placeholder">
+            <div><span class="avatar-icon">🧑🏻‍🏫</span><strong>张骞数字人将在这里出现</strong><small>如果你制作的是可交互 Agent，请在 D-ID 的 Embed 页面复制官方嵌入代码；如果制作的是预先生成的口播视频，请使用视频嵌入方法。</small></div>
+          </div>
+        </div>
+        <div class="embed-instructions"><b>嵌入提示：</b> 互动 Agent 通常使用 D-ID 提供的脚本代码；口播视频则可使用 MP4 文件播放。<a href="https://help.d-id.com/hc/en-us/articles/31262657384849-How-to-embed-my-Agent-on-a-website" target="_blank" rel="noopener">查看 D-ID 官方嵌入教程 ↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quiz">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker">05 / CHECK YOUR UNDERSTANDING</div><h2>课堂挑战：多维度检验学习成果</h2></div><p>共 10 道题，包含单选、判断与综合理解。完成后可查看得分、逐题解析，并重新挑战。</p></div>
+    <div class="quiz">
+      <div class="quiz-card">
+        <div class="quiz-topline"><span class="tag" id="questionType">单选题</span><span class="quiz-counter" id="questionCounter">第 1 / 10 题</span></div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <h3 id="questionTitle">题目加载中……</h3>
+        <div id="questionOptions"></div>
+        <div class="feedback" id="feedback" aria-live="polite">请选择一个答案。</div>
+        <div class="quiz-controls">
+          <button class="quiz-nav secondary-nav" id="prevQuestion" disabled>上一题</button>
+          <button class="quiz-nav" id="nextQuestion">下一题</button>
+          <button class="quiz-nav" id="submitQuiz" style="display:none">查看成绩</button>
+          <button class="quiz-nav secondary-nav" id="restartQuiz" style="display:none">重新挑战</button>
+        </div>
+        <div id="quizResult" class="quiz-result" aria-live="polite" style="display:none"></div>
+      </div>
+      <aside class="reflection"><div class="kicker">THINK DEEPER</div><h3>开放性思考</h3><p class="prompt">为什么说张骞的出使是汉朝与西域交流的重要一步，而不是丝绸之路形成的唯一原因？</p><p>试着从“地理认知”“外交联系”和“后续交流”三个角度组织答案。历史解释需要建立在史实基础上，也要避免把复杂的历史进程归因于单独一个人。</p><hr style="border:0;border-top:1px solid #d7cbb7;margin:20px 0"><h3>学习建议</h3><p>答题后回看人物使命、时间轴与西行路线，尝试把“背景—过程—影响”连成完整的历史解释链。</p></aside>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap footer-inner"><div><b class="smallcaps">丝路·寻踪</b>　数字人智慧历史微课</div><div>AI生成形象为教学艺术化呈现；历史路线为示意。请以教材与可靠史料为准。</div></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+menuBtn.addEventListener('click',()=>{nav.style.display=nav.style.display==='flex'?'none':'flex';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=760)nav.style.display='none';}));
+const quizQuestions = [
+  {type:'单选题',title:'关于张骞出使西域的历史意义，下列哪项表述更准确？',options:['张骞一人一次性创立了完整的丝绸之路','张骞的出使增进了汉朝对西域的了解，为后续交流创造了条件','张骞出使的唯一目的就是运输丝绸','张骞第一次出使完全实现了联合大月氏的原定目标'],answer:1,explain:'张骞带回了有关西域的重要信息，为汉朝进一步发展与西域的联系创造了条件。丝绸之路的形成与发展是长期历史过程。'},
+  {type:'单选题',title:'张骞第一次出使西域时，汉朝希望联合哪个地区或族群共同应对匈奴？',options:['大月氏','大秦','日本','朝鲜'],answer:0,explain:'汉武帝时期，汉朝希望联合大月氏共同应对匈奴，因此派张骞出使西域。'},
+  {type:'判断题',title:'张骞第一次出使途中曾被匈奴拘留多年，但后来仍继续西行。',options:['正确','错误'],answer:0,explain:'张骞途中遭遇拘留，脱身后继续完成西行使命，体现了此次出使的艰难。'},
+  {type:'单选题',title:'张骞第一次出使西域大约发生在哪一年？',options:['公元前221年','公元前138年','公元前60年','公元后1年'],answer:1,explain:'教学时间轴通常将张骞第一次出使标注为公元前138年左右。具体表述应以课程教材为准。'},
+  {type:'单选题',title:'下列哪一项最适合概括张骞出使的直接成果？',options:['立即建立了覆盖欧亚的统一政权','带回了西域各地的见闻与重要信息','从此所有地区都停止了战争','汉朝从此不再需要外交活动'],answer:1,explain:'张骞返回汉朝后带回有关西域的见闻与信息，增进了汉朝对西域的认识。'},
+  {type:'判断题',title:'丝绸之路的形成与发展是长期历史过程，不能简单归因于张骞一个人一次出使。',options:['正确','错误'],answer:0,explain:'张骞的出使具有重要推动作用，但后续交流涉及多个时期、地区与群体，是长期发展的结果。'},
+  {type:'单选题',title:'在理解张骞出使的历史背景时，哪一组关系最合理？',options:['汉朝希望联络大月氏—派张骞出使—增进对西域的了解','张骞先建立丝绸之路—汉武帝随后即位—开始第一次出使','为了运输茶叶—张骞出使美洲—开辟海上航线','为寻找欧洲殖民地—张骞出使西域'],answer:0,explain:'这一顺序把出使背景、历史行动与信息成果联系起来，符合课程中介绍的基本脉络。'},
+  {type:'单选题',title:'下列哪项不属于张骞出使后汉朝对西域认识加深所带来的可能影响？',options:['为后续外交往来提供信息','促进不同地区之间的联系','帮助汉朝了解沿途地区的社会与物产','证明丝绸之路在张骞出发前就已完整建成并由他一次性控制'],answer:3,explain:'张骞出使的重要作用在于增进了解、创造交流条件，并不意味着他一次性建成或控制了完整的丝绸之路。'},
+  {type:'判断题',title:'理解历史路线时，既要关注长安、河西走廊、西域等空间线索，也要结合人物使命与时代背景。',options:['正确','错误'],answer:0,explain:'把人物、时间、地点和历史背景联系起来，有助于形成更完整的历史解释。'},
+  {type:'综合理解',title:'如果要用一句话总结张骞出使西域的意义，哪一项最全面？',options:['张骞的全部贡献只是个人完成了一次长途旅行','张骞出使增进了汉朝对西域的了解，为后续交往与交流发展创造了条件','张骞出使后，所有地区立刻形成完全相同的文化','张骞出使证明历史变化只由一个人物决定'],answer:1,explain:'这一表述既强调张骞出使的重要作用，也避免夸大个人作用，能够体现历史进程的连续性与复杂性。'}
+];
+let currentQuestion = 0;
+let answers = Array(quizQuestions.length).fill(null);
+let submitted = false;
+const typeEl = document.getElementById('questionType');
+const counterEl = document.getElementById('questionCounter');
+const titleEl = document.getElementById('questionTitle');
+const optionsEl = document.getElementById('questionOptions');
+const feedbackEl = document.getElementById('feedback');
+const progressEl = document.getElementById('progressFill');
+const prevBtn = document.getElementById('prevQuestion');
+const nextBtn = document.getElementById('nextQuestion');
+const submitBtn = document.getElementById('submitQuiz');
+const restartBtn = document.getElementById('restartQuiz');
+const resultEl = document.getElementById('quizResult');
+
+function renderQuestion(){
+  const q = quizQuestions[currentQuestion];
+  typeEl.textContent = q.type;
+  counterEl.textContent = `第 ${currentQuestion + 1} / ${quizQuestions.length} 题`;
+  titleEl.textContent = q.title;
+  progressEl.style.width = `${((currentQuestion + 1) / quizQuestions.length) * 100}%`;
+  optionsEl.innerHTML = '';
+  q.options.forEach((option, index) => {
+    const btn = document.createElement('button');
+    btn.className = 'option';
+    btn.type = 'button';
+    btn.textContent = `${String.fromCharCode(65 + index)}. ${option}`;
+    if(answers[currentQuestion] === index) btn.classList.add('selected');
+    if(submitted){
+      btn.disabled = true;
+      if(index === q.answer) btn.classList.add('correct');
+      else if(answers[currentQuestion] === index) btn.classList.add('wrong');
+    }
+    btn.addEventListener('click', () => {
+      if(submitted) return;
+      answers[currentQuestion] = index;
+      renderQuestion();
+    });
+    optionsEl.appendChild(btn);
+  });
+  if(submitted){
+    feedbackEl.textContent = `${answers[currentQuestion] === q.answer ? '回答正确。' : '本题未答对。'}${q.explain}`;
+    feedbackEl.style.color = answers[currentQuestion] === q.answer ? '#526d5a' : '#9b3d2f';
+  }else{
+    feedbackEl.textContent = answers[currentQuestion] === null ? '请选择一个答案。' : '已记录答案，可以继续下一题。';
+    feedbackEl.style.color = '#526d5a';
+  }
+  prevBtn.disabled = currentQuestion === 0 || submitted;
+  nextBtn.style.display = currentQuestion === quizQuestions.length - 1 || submitted ? 'none' : 'inline-block';
+  submitBtn.style.display = !submitted && currentQuestion === quizQuestions.length - 1 ? 'inline-block' : 'none';
+  restartBtn.style.display = submitted ? 'inline-block' : 'none';
+  resultEl.style.display = submitted ? 'block' : 'none';
+  if(submitted) renderResults();
+}
+function renderResults(){
+  const score = answers.reduce((sum, answer, index) => sum + (answer === quizQuestions[index].answer ? 1 : 0), 0);
+  let htmlResult = `<p><strong>本次得分：${score} / ${quizQuestions.length}（${Math.round(score / quizQuestions.length * 100)} 分）</strong></p>`;
+  htmlResult += `<p>${score === quizQuestions.length ? '太棒了！你已经掌握了本课的核心脉络。' : score >= 7 ? '掌握得不错！建议重点回顾答错题目的解析。' : '建议回看人物使命、时间轴和路线图，再进行一次挑战。'}</p><h4>逐题回顾</h4>`;
+  quizQuestions.forEach((q, index) => {
+    const correct = answers[index] === q.answer;
+    const picked = answers[index] === null ? '未作答' : `${String.fromCharCode(65 + answers[index])}. ${q.options[answers[index]]}`;
+    htmlResult += `<div class="review-item"><b class="${correct ? 'review-correct' : 'review-wrong'}">${index + 1}. ${correct ? '✓ 正确' : '✗ 需回顾'}：${q.title}</b><div>你的答案：${picked}</div><div>参考答案：${String.fromCharCode(65 + q.answer)}. ${q.options[q.answer]}</div><div>解析：${q.explain}</div></div>`;
+  });
+  resultEl.innerHTML = htmlResult;
+}
+prevBtn.addEventListener('click', () => { if(currentQuestion > 0 && !submitted){currentQuestion--;renderQuestion();} });
+nextBtn.addEventListener('click', () => { if(currentQuestion < quizQuestions.length - 1 && !submitted){currentQuestion++;renderQuestion();} });
+submitBtn.addEventListener('click', () => {
+  submitted = true;
+  renderQuestion();
+  resultEl.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+restartBtn.addEventListener('click', () => {
+  currentQuestion = 0;
+  answers = Array(quizQuestions.length).fill(null);
+  submitted = false;
+  renderQuestion();
+});
+renderQuestion();
+</script>
+
+<!-- D-ID EMBED SNIPPET GOES HERE IF YOU WANT THE AGENT ON EVERY PAGE.
+Example structure from D-ID documentation (replace placeholders with the exact code from your Studio):
+<script type="module" src="https://agent.d-id.com/v2/index.js"
+ data-mode="full" data-target-id="did-agent-container"
+ data-client-key="YOUR_CLIENT_KEY" data-agent-id="YOUR_AGENT_ID"
+ data-name="did-agent"></script>
+Do not publish private API keys. Use only the client key/code supplied for website embedding by D-ID.
+-->
+</body>
+</html>
