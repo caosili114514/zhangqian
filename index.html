@@ -89,7 +89,7 @@ footer{padding:27px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 
 <section class="section alt" id="timeline">
   <div class="wrap">
-    <div class="section-head"><div><div class="kicker">02 / TIMELINE</div><h2>沿着时间，读懂历史</h2></div><p>点击时间节点可以查看学习提示。年份采用常见教材叙述，具体表述请以课程教材为准。</p></div>
+    <div class="section-head"><div><div class="kicker">02 / TIMELINE</div><h2>沿着时间，读懂历史</h2></div><p>点击时间节点可以查看学习提示。</p></div>
     <div class="timeline">
       <article class="event"><strong>公元前138年左右</strong><h3>第一次出使</h3><p>张骞奉命前往西域，途中遭遇阻碍。</p></article>
       <article class="event"><strong>公元前126年左右</strong><h3>返回汉朝</h3><p>张骞回到汉朝，带回西域各地的见闻与信息。</p></article>
@@ -142,7 +142,7 @@ footer{padding:27px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       </div>
       <div class="agent-panel">
         <h3>微课视频 · 张骞出使西域</h3>
-        <p>选择本地 MP4 视频即可在本页预览；发布网站时，也可以把视频放到稳定的公开视频地址后嵌入。</p>
+        <p>选择本地 MP4 视频即可在本页预览；</p>
         <div class="micro-lesson-frame" id="microLessonFrame">
           <div class="video-placeholder" id="videoPlaceholder"><span class="video-icon">▶</span><strong>微课视频将在这里播放</strong><p>建议时长 3–5 分钟：出使背景、艰难历程、直接成果与历史影响。</p></div>
           <video id="microLessonVideo" controls playsinline preload="metadata" style="display:none" aria-label="张骞出使西域微课视频"></video>
@@ -368,34 +368,37 @@ clearVideoBtn.addEventListener('click', () => {
 </script>
 
 
-<!-- Preview-compatible fallback: external D-ID module is intentionally disabled in this preview copy. -->
-<style>
-.preview-agent-launcher{position:fixed;right:18px;bottom:18px;z-index:9999;border:0;border-radius:999px;background:#9b3d2f;color:#fffaf1;padding:12px 17px;box-shadow:0 8px 28px #30251e38;font-weight:700;cursor:pointer}
-.preview-agent-tip{display:none;position:fixed;right:18px;bottom:76px;z-index:9999;width:min(310px,calc(100vw - 36px));padding:16px 18px;background:#fffdf8;color:#252c2a;border:1px solid #e4ded1;border-radius:10px;box-shadow:0 12px 36px #30251e25;font-size:13px;line-height:1.7}
-.preview-agent-tip.show{display:block}.preview-agent-tip button{float:right;border:0;background:transparent;font-size:18px;color:#68716b;cursor:pointer}
-</style>
-<div class="preview-agent-tip" id="previewAgentTip"><button type="button" id="previewAgentClose" aria-label="关闭">×</button><strong>张骞数字人</strong><p>ChatGPT 内部预览可能会拦截第三方数字人组件。此处保留了入口样式；如需真实数字人交互，请下载网页并使用 Edge 或 Chrome 打开完整版本。</p></div>
-<button class="preview-agent-launcher" id="previewAgentLauncher" type="button" aria-expanded="false">✦ 张骞数字人</button>
+<!-- D-ID 官方数字人嵌入：页面加载时由 D-ID 小组件自行显示。若要真正嵌入内容区，请在 D-ID 选择 Frame 布局并替换为对应 Embed Code。 -->
+<script
+  type="module"
+  src="https://agent.d-id.com/v2/index.js"
+  data-mode="fabio"
+  data-client-key="ck_7n0zbpiJFwqJ1KXmqiSke"
+  data-agent-id="v2_agt_q5HmHLWW"
+  data-name="did-agent"
+  data-monitor="true"
+  data-light-mode="false"
+  data-orientation="horizontal"
+  data-position="right"
+  data-open-mode="expanded">
+</script>
+
 <script>
 (function(){
-  var launcher=document.getElementById('previewAgentLauncher');
-  var tip=document.getElementById('previewAgentTip');
-  var close=document.getElementById('previewAgentClose');
-  if(!launcher||!tip||!close)return;
-  launcher.addEventListener('click',function(){var show=!tip.classList.contains('show');tip.classList.toggle('show',show);launcher.setAttribute('aria-expanded',String(show));});
-  close.addEventListener('click',function(){tip.classList.remove('show');launcher.setAttribute('aria-expanded','false');});
+  var launcher=document.getElementById('didLauncher');
+  var note=document.getElementById('didLauncherNote');
+  var close=document.getElementById('didNoteClose');
+  if(!launcher||!note||!close)return;
+  launcher.addEventListener('click',function(){
+    /* The D-ID embed owns its own launcher; this custom button provides a clear diagnostic
+       rather than pretending to control an undocumented third-party widget API. */
+    var show=!note.classList.contains('show');
+    note.classList.toggle('show',show);
+    launcher.setAttribute('aria-expanded',String(show));
+  });
+  close.addEventListener('click',function(){note.classList.remove('show');launcher.setAttribute('aria-expanded','false');});
 })();
-<script type="module"
-      src="https://agent.d-id.com/v2/index.js"
-      data-mode="fabio"
-      data-client-key="ck_7n0zbpiJFwqJ1KXmqiSke"
-      data-agent-id="v2_agt_q5HmHLWW"
-      data-name="did-agent"
-      data-monitor="true"
-      data-light-mode="false"
-      data-orientation="horizontal"
-      data-position="right"
-      data-open-mode="expanded">
 </script>
+
 </body>
 </html>
