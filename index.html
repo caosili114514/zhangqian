@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="穿越两千年：重走丝绸之路——数字人智慧历史微课">
+<meta name="description" content="穿越两千年：张骞带你重走丝绸之路——数字人智慧历史微课">
 <title>丝路·寻踪｜张骞与丝绸之路互动历史课堂</title>
 <style>
 :root{--ink:#252c2a;--muted:#68716b;--paper:#f7f4ec;--paper2:#fffdf8;--red:#9b3d2f;--gold:#c59a53;--green:#526d5a;--line:#e4ded1;--shadow:0 16px 42px rgba(44,39,29,.08)}
@@ -29,7 +29,8 @@ footer{padding:27px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 .map-pin:hover,.map-pin:focus-visible,.map-pin.active{background:#28362f;transform:translate(-50%,-50%) scale(1.07);box-shadow:0 0 0 4px #ffffff9c,0 3px 15px #39251f35;outline:none}
 .pin-changan{left:95%;top:58%}.pin-hex{left:65%;top:51%}.pin-west{left:39%;top:47%}.pin-daxia{left:7%;top:40%}
 .map-detail{margin-top:14px;padding:15px 18px;border:1px solid var(--line);border-radius:8px;background:#fffdf8;line-height:1.75;min-height:90px;transition:background .2s}.map-detail strong{color:var(--red)}.map-detail p{margin:5px 0 0;color:var(--muted);font-size:14px}
-.agent-panel .micro-lesson-frame{min-height:290px;border:1px dashed #c8bba4;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;background:linear-gradient(135deg,#f1eadb,#fbf8f0);overflow:hidden}
+.agent-panel .micro-lesson-frame{position:relative;min-height:290px;aspect-ratio:16/9;border:1px solid #c8bba4;border-radius:8px;display:block;padding:0;background:#201b17;overflow:hidden}
+.micro-lesson-frame iframe{display:block;width:100%;height:100%;min-height:290px;border:0;border-radius:7px;background:#201b17}
 .micro-lesson-frame video{display:block;width:100%;max-height:430px;background:#1f2824;border-radius:6px}
 .micro-lesson-frame .video-placeholder{padding:15px}.micro-lesson-frame .video-placeholder .video-icon{font-size:42px;display:block;margin-bottom:9px}
 .video-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px}.video-actions label,.video-actions button{display:inline-flex;align-items:center;gap:7px;border:1px solid #cbbca4;background:#fffaf1;color:#574e3b;border-radius:6px;padding:9px 13px;font-size:13px;cursor:pointer}.video-actions label:hover,.video-actions button:hover{border-color:var(--red);color:var(--red)}
@@ -89,7 +90,7 @@ footer{padding:27px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 
 <section class="section alt" id="timeline">
   <div class="wrap">
-    <div class="section-head"><div><div class="kicker">02 / TIMELINE</div><h2>沿着时间，读懂历史</h2></div><p>点击时间节点可以查看学习提示。</p></div>
+    <div class="section-head"><div><div class="kicker">02 / TIMELINE</div><h2>沿着时间，读懂历史</h2></div><p>点击时间节点可以查看学习提示。年份采用常见教材叙述，具体表述请以课程教材为准。</p></div>
     <div class="timeline">
       <article class="event"><strong>公元前138年左右</strong><h3>第一次出使</h3><p>张骞奉命前往西域，途中遭遇阻碍。</p></article>
       <article class="event"><strong>公元前126年左右</strong><h3>返回汉朝</h3><p>张骞回到汉朝，带回西域各地的见闻与信息。</p></article>
@@ -137,22 +138,28 @@ footer{padding:27px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <div class="agent-copy">
         <div class="kicker" style="color:#d9b778">WATCH · THINK · CONNECT</div>
         <h2>从一次出使，<br>看见长期的交流。</h2>
-        <p>为什么出发？沿途经历了什么？带回的信息如何影响汉朝对西域的认识？观看后，可点击地图节点并完成课堂挑战。</p>
+        <p>微课建议按三个问题展开：为什么出发？沿途经历了什么？带回的信息如何影响汉朝对西域的认识？观看后，可点击地图节点并完成课堂挑战。</p>
         <div class="agent-points"><div>学习目标一：说出第一次出使的背景与大致年代</div><div>学习目标二：借助地图描述长安、河西走廊与西域的空间联系</div><div>学习目标三：解释张骞出使的重要作用，并避免夸大个人作用</div></div>
       </div>
       <div class="agent-panel">
         <h3>微课视频 · 张骞出使西域</h3>
-        <p>选择本地 MP4 视频即可在本页预览；</p>
+        <p>通过哔哩哔哩播放器观看微课，结合路线地图理解张骞出使西域的背景、历程与历史影响。</p>
         <div class="micro-lesson-frame" id="microLessonFrame">
-          <div class="video-placeholder" id="videoPlaceholder"><span class="video-icon">▶</span><strong>微课视频将在这里播放</strong><p>建议时长 3–5 分钟：出使背景、艰难历程、直接成果与历史影响。</p></div>
+          <iframe
+            src="https://player.bilibili.com/player.html?bvid=BV1Ktxu6KEFT&amp;page=1&amp;danmaku=0&amp;autoplay=0"
+            title="张骞出使西域微课视频"
+            scrolling="no"
+            frameborder="0"
+            allow="fullscreen; picture-in-picture; encrypted-media; autoplay; clipboard-write; web-share"
+            allowfullscreen="true"
+            loading="lazy">
+          </iframe>
+          <div class="video-placeholder" id="videoPlaceholder" style="display:none"><span class="video-icon">▶</span><strong>微课视频将在这里播放</strong><p>建议时长 3–5 分钟：出使背景、艰难历程、直接成果与历史影响。</p></div>
           <video id="microLessonVideo" controls playsinline preload="metadata" style="display:none" aria-label="张骞出使西域微课视频"></video>
-        </div>
-        <div class="video-actions">
-          <label for="microVideoFile">＋ 选择本地微课视频</label>
           <input id="microVideoFile" type="file" accept="video/mp4,video/webm,video/ogg" style="display:none">
-          <button id="clearMicroVideo" type="button">清除预览</button>
+          <button id="clearMicroVideo" type="button" style="display:none">清除预览</button>
         </div>
-        <p class="micro-note">本地选择仅用于当前浏览器预览，不会自动上传或保存视频。</p>
+        <p class="micro-note">视频由哔哩哔哩托管，播放时需要联网。若播放器无法加载，请检查视频的公开状态、站外嵌入权限及当前网络环境。</p>
       </div>
     </div>
   </div>
